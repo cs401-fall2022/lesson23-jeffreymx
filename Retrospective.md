@@ -1,7 +1,7 @@
 # Retrospective
 
-- name: Jane Doe
-- email: janedoe@u.boisestate.edu
+- name: Jeffrey Margulieux
+- email: jeffreymargulieux@u.boisestate.edu
 
 ## Instructions
 
