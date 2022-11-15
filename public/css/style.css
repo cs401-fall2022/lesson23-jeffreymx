@@ -26,7 +26,7 @@ header{
     text-align: center;
     color: orange;
 }
-#content{
+#bio, #blogs, #new{
     padding-top: 5px;
     font-size: 20px;
 }
@@ -60,7 +60,7 @@ header{
     padding-right: 10px;
     float: right;
 }
-#bio{
+#me{
     padding: 5px;
     text-align: justify;
     border: 3px solid orange;
@@ -81,4 +81,20 @@ header{
 }
 #compSci{
     padding-top: 50px;
+}
+#first, #second, #third{
+    padding: 5px;
+}
+#password{
+    height: 20px;
+}
+#topic{
+    font-size: 20px;
+}
+#newPost{
+    height: 100px;
+    width: 100%;
+}
+#wrongPass, #chooseTopic{
+    color: red;
 }
