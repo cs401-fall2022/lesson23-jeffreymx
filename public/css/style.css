@@ -1,0 +1,100 @@
+html{
+    font-family: Arial;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+h2{
+    text-align: center;
+}
+header{
+    margin: -8px;
+    width: 60%;
+    text-align: center;
+    position: fixed;
+    background-color: white;
+    padding-top: 0px;
+}
+#bannerTop{
+    border: 3px solid orange;
+    border-radius: 5px;
+    background-color: lightgray;
+    text-align: center;
+}
+#menu{
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    color: orange;
+}
+#bio, #blogs, #new{
+    padding-top: 5px;
+    font-size: 20px;
+}
+#logo1{
+    height: 50px;
+    width: 50px;
+    padding-top: 10px;
+    padding-left: 5%;
+    float: left;
+}
+#logo2{
+    height: 50px;
+    width: 50px;
+    padding-top: 10px;
+    padding-right: 5%;
+    float: right;
+}
+#title{
+    text-align: center;
+}
+#contact{
+    text-align: center;
+    padding-top: 50px;
+}
+#author{
+    height: 150px;
+    width: 150px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    padding-top: 13px;
+    padding-right: 10px;
+    float: right;
+}
+#me{
+    padding: 5px;
+    text-align: justify;
+    border: 3px solid orange;
+    border-radius: 5px;
+}
+#about{
+    padding-top: 180px;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+#math{
+    padding-top: 50px;
+    display: block;
+}
+#robots{
+    padding-top: 50px;
+}
+#compSci{
+    padding-top: 50px;
+}
+#first, #second, #third{
+    padding: 5px;
+}
+#password{
+    height: 20px;
+}
+#topic{
+    font-size: 20px;
+}
+#newPost{
+    height: 100px;
+    width: 100%;
+}
+#wrongPass, #chooseTopic{
+    color: red;
+}
