@@ -1,0 +1,82 @@
+extends layout
+
+//-Help converting HTML to pug from https://html-to-pug.com/
+block content
+  header
+    #bannerTop
+      img#logo1(src='images/RobotLogo.png' alt='my image')
+      img#logo2(src='images/RobotLogo.png' alt='my image')
+      h1#title Jeff&apos;s Blog
+    #menu
+      a(href='#about') About Me
+      |&nbsp &nbsp &nbsp
+      a(href='#math') Math Blogs
+      |&nbsp &nbsp &nbsp
+      a(href='#robots') Robotics Blogs
+      |&nbsp &nbsp &nbsp
+      a(href='#compSci') CS blogs
+      |&nbsp &nbsp &nbsp
+      a(href='#contact') Contact Me
+  #bio
+    section#about
+      h2 About Me
+      img#author(src='images/Jeff.jpg' alt='my pic')
+      p#me
+        br
+        |I have spent most of my life in the great state of Idaho.  After graduating high school in 
+        |Meridian I completed a teaching degree in Pocatello.  The last 7 years have been spent teaching 
+        |high school in Buhl.  My wonderful wife and I stay busy coaching the Buhlean Operators (pun 
+        |intended) FRC team #6358 and trying to keep our 3 kids out of trouble.
+        br
+        br
+  form(action='/add' method='POST')
+    #first
+      label(for='newPost')
+      |New Post:
+      br
+      textarea(name='newPost', id='newPost') Enter the text of a new blog entry here.
+    #second
+      label(for='topic') Topic:
+      select(name='topic', id='topic')
+        option pick a topic
+        option(value='math') Math
+        option(value='robots') Robotics
+        option(value='compSci') Computer Science
+      p#chooseTopic
+    #third
+      label(for='password') Password:
+      textarea#password(name='password')
+    div
+      button Submit
+      p#wrongPass
+
+  #blogs
+    section#math
+        h2 Thoughts on Math
+               
+        div 
+          each txt in data
+            if (txt.blog_type === 'math')
+              p= txt.blog_txt
+    
+    section#robots
+        h2 Reflecting on Robotics
+        
+        div 
+          each txt in data
+            if (txt.blog_type === 'robots')
+              p= txt.blog_txt
+    
+    section#compSci
+        h2 Journey through Computer Science
+        
+        div 
+          each txt in data
+            if (txt.blog_type === 'compSci')
+              p= txt.blog_txt
+    
+    section#contact
+        h2 Contact Info
+        p You can contact me at: &nbsp
+          a(href="mailto:jeff.margulieux@buhlschools.org") jeff.margulieux@buhlschools.org
+  
