@@ -29,4 +29,5 @@ TODO
 
 ## Sources used
 
-TODO
+Lots of starter code from class!  I used an html to pug engine to help get my code into pug (html-to-pug.com).
+

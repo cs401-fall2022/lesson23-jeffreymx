@@ -87,6 +87,7 @@ header{
 }
 #password{
     height: 20px;
+    font-size: 20px;
 }
 #topic{
     font-size: 20px;
@@ -94,7 +95,27 @@ header{
 #newPost{
     height: 100px;
     width: 100%;
+    font-size: 20px;
 }
 #wrongPass, #chooseTopic{
     color: red;
+}
+#blogNum{
+    float: left;
+    padding-right: 10px;
+}
+#delete{
+    padding-top: 18px;
+}
+#blogTxt{
+    padding-top: 5px;
+    padding-left: 10px;
+    text-align: justify;
+}
+#submit{
+    padding: 5px;
+    font-size: 20px;
+}
+textarea{
+    vertical-align: middle;
 }

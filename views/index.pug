@@ -35,6 +35,7 @@ block content
       |New Post:
       br
       textarea(name='newPost', id='newPost') Enter the text of a new blog entry here.
+      p
     #second
       label(for='topic') Topic:
       select(name='topic', id='topic')
@@ -46,36 +47,58 @@ block content
     #third
       label(for='password') Password:
       textarea#password(name='password')
-    div
-      button Submit
       p#wrongPass
+    div
+      button#submit Submit
 
   #blogs
     section#math
+        hr
         h2 Thoughts on Math
                
         div 
           each txt in data
             if (txt.blog_type === 'math')
-              p= txt.blog_txt
-    
+              #blogNum
+                p= 'Entry No. ' + txt.blog_id
+              #delete
+                form(action='/delete' method='POST')
+                  button#blog(name='blog', value=txt.blog_id) delete this entry
+              #blogTxt
+                //- CONVERTING DOUBLE STARS IN MY DB BACK INTO APOSTROPHES
+                p= txt.blog_txt.replace('\*\*', '\'')  
+
     section#robots
+        hr
         h2 Reflecting on Robotics
-        
         div 
           each txt in data
             if (txt.blog_type === 'robots')
-              p= txt.blog_txt
+              #blogNum
+                p= 'Entry No. ' + txt.blog_id
+              #delete
+                form(action='/delete' method='POST')
+                  button#blog(name='blog', value=txt.blog_id) delete this entry
+              #blogTxt
+                p= txt.blog_txt
     
     section#compSci
+        hr
         h2 Journey through Computer Science
         
         div 
           each txt in data
             if (txt.blog_type === 'compSci')
-              p= txt.blog_txt
+              #blogNum
+                p= 'Entry No. ' + txt.blog_id
+              #delete
+                form(action='/delete' method='POST')
+                  button#blog(name='blog', value=txt.blog_id) delete this entry
+              #blogTxt
+                p= txt.blog_txt
     
     section#contact
+        hr
         h2 Contact Info
         p You can contact me at: &nbsp
           a(href="mailto:jeff.margulieux@buhlschools.org") jeff.margulieux@buhlschools.org
