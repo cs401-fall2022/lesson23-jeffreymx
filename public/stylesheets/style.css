@@ -82,17 +82,17 @@ header{
 #compSci{
     padding-top: 50px;
 }
-#first, #second, #third{
+#first, #second, #third, #fourth, #fifth, #sixth, # seventh{
     padding: 5px;
 }
-#password{
+#password, #blogNumber{
     height: 20px;
     font-size: 20px;
 }
 #topic{
     font-size: 20px;
 }
-#newPost{
+#newPost, #editPost{
     height: 100px;
     width: 100%;
     font-size: 20px;
@@ -118,4 +118,7 @@ header{
 }
 textarea{
     vertical-align: middle;
+}
+h3{
+    text-align: center;
 }

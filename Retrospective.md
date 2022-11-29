@@ -21,13 +21,19 @@ Be safe CITE!
 
 ## Experience
 
-TODO
+I tried really hard to write a webpage in html and create a database (sqlite3).  Both worked great but 
+I could not link them.  I finally went back to lab 10 and reworked my website based off that lab.  I am 
+still not a huge fan of the pug code but I am sure the more I play with it the better I will understand 
+it.  A lot of my code is based off lab 10 but I think I have a little better feel for how it is all 
+working between index.pug and index.js.  
 
 ## Known issues or Bugs
 
-TODO
+I do not have any issus that I am aware of at this point.  There are things I would like to do 
+differently but would need more time to play around with the code.
 
 ## Sources used
 
-Lots of starter code from class!  I used an html to pug engine to help get my code into pug (html-to-pug.com).
+Lots of starter code from class!  I used an html to pug engine to help get my html code into pug 
+(html-to-pug.com).
 

@@ -51,9 +51,32 @@ router.post('/add', (req, res, next) => {
         // APOSTROPHES FROM THE USER CRASH THE DB SO I CONVERT AND STORE THEM AS DOUBLE STARS
         var input = req.body.newPost;
         var sanitized = input.replace('\'', '\*\*');
-        console.log(sanitized);
         db.exec(`insert into blog (blog_type, blog_txt)
                   values ('${req.body.topic}', '${sanitized}');`);
+      }
+    );
+  }
+  else{
+    console.log("it seems you have the wrong password");
+  }
+  //redirect to homepage
+  res.redirect('/');
+})
+
+//TODO - figure out how to edit an entry
+router.post('/update', (req, res, next) => {
+  if (req.body.password==="correct"){
+    var db = new sqlite3.Database('jsmBlogs.sqlite3', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
+        if (err) {
+          console.log("Getting error " + err);
+          exit(1);
+        }
+        console.log("updating " + req.body.editPost);
+        // APOSTROPHES FROM THE USER CRASH THE DB SO I CONVERT AND STORE THEM AS DOUBLE STARS
+        var input = req.body.editPost;
+        var sanitized = input.replace('\'', '\*\*');
+        var math = 'math';
+        db.exec(`update blog set blog_txt = '${sanitized}' where blog_id = '${req.body.blogNumber}';`);
       }
     );
   }

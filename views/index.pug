@@ -30,12 +30,15 @@ block content
         br
         br
   form(action='/add' method='POST')
+    hr  
+    h3 New Blog Entry
     #first
       label(for='newPost')
       |New Post:
       br
       textarea(name='newPost', id='newPost') Enter the text of a new blog entry here.
-      p
+      br
+      br
     #second
       label(for='topic') Topic:
       select(name='topic', id='topic')
@@ -50,6 +53,31 @@ block content
       p#wrongPass
     div
       button#submit Submit
+    
+  br
+  br
+
+  form(action='/update' method='POST')
+    hr
+    h3 Edit Blog Entry
+      br
+    #fourth
+      label(for='blogNumber') Blog Number:
+      textarea(name='blogNumber', id='blogNumber') Blog number to edit.
+    #fifth
+      br
+      label(for='editPost')
+      |Edit Post:
+      br
+      textarea(name='editPost', id='editPost') Enter the updated text.
+      br
+      br
+    #sixth
+      label(for='password') Password:
+      textarea#password(name='password')
+      p#wrongPass
+    div
+      button#submit Update
 
   #blogs
     section#math
