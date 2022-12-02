@@ -30,7 +30,8 @@ working between index.pug and index.js.
 ## Known issues or Bugs
 
 I do not have any issus that I am aware of at this point.  There are things I would like to do 
-differently but would need more time to play around with the code.
+differently but would need more time to play around with the code.  I know there are a lot of features 
+that need to be improved but this is what I had time to do.
 
 ## Sources used
 

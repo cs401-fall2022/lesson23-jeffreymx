@@ -40,6 +40,7 @@ router.get('/', function (req, res, next) {
   });
 });
 
+//This part adds blog entries and is password protected
 router.post('/add', (req, res, next) => {
   if (req.body.password==="correct"){
     var db = new sqlite3.Database('jsmBlogs.sqlite3', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
@@ -63,7 +64,7 @@ router.post('/add', (req, res, next) => {
   res.redirect('/');
 })
 
-//TODO - figure out how to edit an entry
+//This part edits an entry and is password protected
 router.post('/update', (req, res, next) => {
   if (req.body.password==="correct"){
     var db = new sqlite3.Database('jsmBlogs.sqlite3', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
@@ -87,6 +88,7 @@ router.post('/update', (req, res, next) => {
   res.redirect('/');
 })
 
+//This part deletes blog entries and is password protected
 router.post('/delete', (req, res, next) => {
   if (req.body.protected==="correct"){
     console.log(req.body.protected + "wow");
