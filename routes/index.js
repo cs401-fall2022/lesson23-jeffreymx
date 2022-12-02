@@ -88,7 +88,9 @@ router.post('/update', (req, res, next) => {
 })
 
 router.post('/delete', (req, res, next) => {
-  var db = new sqlite3.Database('jsmBlogs.sqlite3', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
+  if (req.body.protected==="correct"){
+    console.log(req.body.protected + "wow");
+    var db = new sqlite3.Database('jsmBlogs.sqlite3', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
       if (err) {
         console.log("Getting error " + err);
         exit(1);
@@ -96,9 +98,13 @@ router.post('/delete', (req, res, next) => {
       console.log("deleting " + req.body.blog);
       //EACH BLOG HAS ITS OWN DELETE BUTTON SO NO UNSANITIZED USER ENTRY
       db.exec(`delete from blog where blog_id='${req.body.blog}';`);     
-      res.redirect('/');
     }
-  );
+    );
+  }
+  else{
+    console.log("deletion is password protected");
+  }
+  res.redirect('/');
 })
 
 module.exports = router;

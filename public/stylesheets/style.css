@@ -85,7 +85,7 @@ header{
 #first, #second, #third, #fourth, #fifth, #sixth, # seventh{
     padding: 5px;
 }
-#password, #blogNumber{
+#password, #blogNumber, #protected{
     height: 20px;
     font-size: 20px;
 }

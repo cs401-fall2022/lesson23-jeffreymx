@@ -30,17 +30,18 @@ block content
         br
         br
   form(action='/add' method='POST')
+    br
     hr  
     h3 New Blog Entry
     #first
       label(for='newPost')
-      |New Post:
+      |New Post
       br
-      textarea(name='newPost', id='newPost') Enter the text of a new blog entry here.
+      textarea(name='newPost', id='newPost', placeholder='Enter the text of a new blog entry here.')
       br
       br
     #second
-      label(for='topic') Topic:
+      label(for='topic') Topic &nbsp
       select(name='topic', id='topic')
         option pick a topic
         option(value='math') Math
@@ -48,8 +49,8 @@ block content
         option(value='compSci') Computer Science
       p#chooseTopic
     #third
-      label(for='password') Password:
-      textarea#password(name='password')
+      label(for='password') Password &nbsp
+      textarea#password(name='password', placeholder='enter password here')
       p#wrongPass
     div
       button#submit Submit
@@ -62,19 +63,19 @@ block content
     h3 Edit Blog Entry
       br
     #fourth
-      label(for='blogNumber') Blog Number:
-      textarea(name='blogNumber', id='blogNumber') Blog number to edit.
+      label(for='blogNumber') Blog Number &nbsp
+      textarea(name='blogNumber', id='blogNumber', placeholder='Blog number to edit.')
     #fifth
       br
       label(for='editPost')
-      |Edit Post:
+      |Edit Post
       br
-      textarea(name='editPost', id='editPost') Enter the updated text.
+      textarea(name='editPost', id='editPost', placeholder='Enter the updated text.')
       br
       br
     #sixth
-      label(for='password') Password:
-      textarea#password(name='password')
+      label(for='password') Password &nbsp
+      textarea#password(name='password', placeholder='enter password here')
       p#wrongPass
     div
       button#submit Update
@@ -92,6 +93,8 @@ block content
               #delete
                 form(action='/delete' method='POST')
                   button#blog(name='blog', value=txt.blog_id) delete this entry
+                  label(for='protected') &nbsp Password protected &nbsp
+                  textarea#protected(name='protected' ,placeholder='enter password here')
               #blogTxt
                 //- CONVERTING DOUBLE STARS IN MY DB BACK INTO APOSTROPHES
                 p= txt.blog_txt.replace('\*\*', '\'')  
@@ -107,6 +110,8 @@ block content
               #delete
                 form(action='/delete' method='POST')
                   button#blog(name='blog', value=txt.blog_id) delete this entry
+                  label(for='protected') &nbsp Password protected &nbsp
+                  textarea#protected(name='protected' ,placeholder='enter password here')
               #blogTxt
                 p= txt.blog_txt
     
@@ -122,6 +127,8 @@ block content
               #delete
                 form(action='/delete' method='POST')
                   button#blog(name='blog', value=txt.blog_id) delete this entry
+                  label(for='protected') &nbsp Password protected &nbsp
+                  textarea#protected(name='protected' ,placeholder='enter password here')
               #blogTxt
                 p= txt.blog_txt
     
